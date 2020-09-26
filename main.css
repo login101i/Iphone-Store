@@ -1,0 +1,279 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+.product-detail{
+    width:100vw;
+    height:100vh;
+    display:flex;
+}
+
+.imagery{
+    flex:1 1 60%;
+    width:60%;
+    padding:50px 100px;
+    background-color: #2484E4;
+    transition: 0.6s;
+
+}
+.imagery img{
+    width:100%;
+    height:100%;
+    object-fit: contain;
+    object-position: top;
+    animation: fadein 1s ease-in-out forwards;
+    animation-delay: 0.5s;
+    opacity:0;
+    transition: 1s;
+
+    
+}
+.detail{
+       flex:1 1 40%;
+    width:40%;
+    padding:50px;
+
+}
+.detail h1{
+    color:rgb(4, 4, 31);
+    font-weight: 700;
+    font-size: 33px;
+}
+.detail h2{
+    color:#53565A;
+    font-weight: 500;
+    font-size: 22px;
+    margin-top: 10px;
+    padding-bottom: 20px;
+}
+.detail h3{
+    color:#53565A;
+    font-weight: 700;
+    font-size: 22px;
+        margin-top: 30px;
+
+}
+.btn_grid{
+    display:flex;
+    flex-wrap: wrap;
+    margin: 0px -15px;
+}
+.btn_wrap{
+    flex:1 1 50%;
+    width:50%;
+    padding:15px;
+
+}
+button {
+	display: block;
+	width: 100%;
+	padding: 15px;
+
+	appearance: none;
+	outline: none;
+	background: none;
+	cursor: pointer;
+	border: 2px solid #EEE;
+
+	color: #313131;
+	font-size: 20px;
+	font-weight: 700;
+
+	transition: 0.4s;
+}
+button:hover{
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2)
+}
+
+/* ________ */
+button.size {
+	position: relative;
+    z-index: 1;
+ 
+}
+button.size::before,
+button.size::after {
+	content: '';
+	position: absolute;
+	top: -3px;
+	left: -3px;
+	right: -3px;
+	bottom: -3px;
+	transition: 0.4s;
+}
+button.size::after {
+	z-index: -1;
+	background-color: #FFF;
+	border: 1px solid #EEE;
+}
+button.size::before {
+	z-index: -2;
+	background-image: linear-gradient(to right, #007aed, #8D00ED);
+}
+button.size.selected::after {
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+.colours .btn_wrap .black.selected {
+	background-color: #212121;
+	color: #FFF;
+}
+
+.colours .btn_wrap .blue.selected {
+	background-color: #2484E4;
+	color: #FFF;
+}
+
+.colours .btn_wrap .red.selected {
+	background-color: #AF1E2D;
+	color: #FFF;
+}
+
+.colours .btn_wrap .yellow.selected {
+	background-color: #FFCE00;
+	color: #212121;
+}
+
+.colours .btn_wrap .coral.selected {
+	background-color: #FF6C37;
+	color: #FFF;
+}
+
+.colours .btn_wrap .white.selected {
+	background-color: #EEE;
+	color: #212121;
+}
+
+.submit {
+	margin-top: 50px;
+	background-image: linear-gradient(to right, transparent 50%, #ED008D 50%, #8D00ED 100%);
+	background-size: 200%;
+	background-position: 0% 50%;
+	transition: 0.8s;
+}
+.submit:hover {
+	color: #FFF;
+	background-position: 100% 50%;
+}
+
+
+@keyframes fadein{
+    0%{
+        opacity:0
+    }
+    100%{
+        opacity:1
+    }
+
+}
+
+@media (max-width:522px){
+    .main{
+        height: 100vh;
+    }
+
+    .product-detail{
+        display: flex;
+        flex-direction: column;
+    }
+.imagery{
+    flex:1 1 60%;
+    width:100%;
+    height:50%;
+    padding:10px 30px;
+    background-color: #2484E4;
+    transition: 0.6s;
+}
+.imagery img{
+  
+    object-fit: cover;
+}
+    .detail{
+       flex:1 1 100%;
+    width:100%;
+    height:30%;
+    padding:10px;
+
+
+}
+.detail h1{
+    color:rgb(4, 4, 31);
+    font-weight: 700;
+    font-size: 22px;
+    padding-bottom: 10px;
+}
+.detail h2{
+    color:#53565A;
+    font-weight: 500;
+    font-size: 13px;
+    margin-top: 10px;
+    display:none;
+  
+}
+.detail h3{
+    color:#53565A;
+    font-weight: 700;
+    font-size: 13px;
+            margin-top: 0px;
+
+      
+
+}
+.btn_grid{
+    display:flex;
+    flex-wrap: wrap;
+    margin: 0px -5px;
+}
+.btn_wrap{
+    flex:1 1 50%;
+    width:50%;
+    padding:5px;
+
+}
+button {
+	display: block;
+	width: 100%;
+	padding: 3px;
+
+	appearance: none;
+	outline: none;
+	background: none;
+	cursor: pointer;
+	border: 2px solid #EEE;
+
+	color: #313131;
+	font-size: 10px;
+	font-weight: 700;
+
+	transition: 0.4s;
+}
+button:hover{
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2)
+}
+
+.submit {
+	margin-top: 10px;
+	background-image: linear-gradient(to right, transparent 50%, #ED008D 50%, #8D00ED 100%);
+	background-size: 200%;
+	background-position: 0% 50%;
+    transition: 0.8s;
+    padding-bottom: 10px;
+}
+
+button.size::before,
+button.size::after {
+	content: '';
+	position: absolute;
+	top: -2px;
+	left: -2px;
+	right: -2px;
+	bottom: -2px;
+	transition: 0.4s;
+}
+
+}
